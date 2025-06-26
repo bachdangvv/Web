@@ -1,0 +1,27 @@
+h1{
+    color: red;
+}
+p{
+    color: #1da15f;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: justify; /* left right center justify */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400; /* normal:400 thin:200 extra-thin:200 light:300 medium:500 semi-bold:600 bold:700 extra-bold:800 black:900 */
+    text-decoration: none; /* underline line-through overline none*/
+    text-transform: none;  /* uppercase lowercase capitalize none*/
+    width: 600px;
+    font-style: italic;
+    word-spacing: 0.5px;
+    background-color: #808080;
+    border-bottom: 2px solid yellow;
+}
+a{
+    color: hsl(0, 0%, 0%);
+    text-decoration: none;
+}
+body{
+    background-color: #f0f0f0;
+    background-image: url(".../images/Picture1.png");
+    background-size: cover;
+}
