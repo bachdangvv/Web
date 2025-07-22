@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Form Checkout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/form-checkout.css"/>
+</head>
+<body>
+    <div class="step-progress">
+  <div class="step active">
+    <div class="circle">1</div>
+    <div class="label">Shipping</div>
+  </div>
+  <div class="line"></div>
+  <div class="step">
+    <div class="circle">2</div>
+    <div class="label">Billing</div>
+  </div>
+  <div class="line"></div>
+  <div class="step">
+    <div class="circle">3</div>
+    <div class="label">Review</div>
+  </div>
+</div>
+
+    <div class="checkout-container">
+    <!-- Form bên trái -->
+    <div class="checkout-form">
+      <h2>Shipping Address</h2>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name*</label>
+          <input type="text" placeholder="First Name">
+        </div>
+        <div class="form-group">
+          <label>Last Name*</label>
+          <input type="text" placeholder="Last Name">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Address Line 1*</label>
+        <input type="text" placeholder="Address Line 1">
+      </div>
+
+      <div class="form-group">
+        <label>Address Line 2</label>
+        <input type="text" placeholder="Address Line 2">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Country*</label>
+          <select>
+            <option>United States</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>City*</label>
+          <input type="text" placeholder="City">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>State*</label>
+          <select>
+            <option>California</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Zip*</label>
+          <input type="text" placeholder="Zip">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Phone Number*</label>
+        <input type="text" placeholder="In case questions arise">
+      </div>
+
+      <div class="form-group checkbox">
+        <label>
+          <input type="checkbox"> Make Default
+        </label>
+      </div>
+
+      <button class="submit-btn">Continue To Billing Information</button>
+    </div>
+
+    <!-- Đơn hàng bên phải -->
+    <div class="order-summary">
+      <h3>Order Summary</h3>
+      <p>#312243643</p>
+      <p>Items: 1</p>
+      <p><strong>Total: $68.00</strong></p>
+
+      <h4>Order Details</h4>
+      <div class="order-item">
+        <img src="images\shirt-checkout.jpg" width="80px" height="120px" alt="Product">
+        <div>
+          <p>T-Shirt Button-Down</p>
+          <p>Qty 1</p>
+          <p>$68.00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
