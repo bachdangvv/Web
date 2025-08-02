@@ -52,6 +52,11 @@
         .unit-celcius {
             color: #fff;
         }
+
+        .send-button {
+            width: 25px !important;
+            height: auto !important;
+        }
     
         .weather-right {
             display: flex;
@@ -64,7 +69,8 @@
 <body>
     <div class="weather-info">
         <div class="weather-left">
-            <input id="city" name="city" onkeyenter="searchWeather()" placeholder="Enter your city">
+            <input id="city" name="city" onkeypress="searchWeather()" placeholder="Enter your city">
+            <img id="send_button" class="send-button" src="images/send-button.png" onclick="searchWeather()"/>
             <br />
             <img id="weather_image" class="weather-image" src="#"/>
             <div class="temp_block">
@@ -84,8 +90,24 @@
     </div>
     <script type="text/javascript">
         function searchWeather() {
-            if (event.keycode == 13) {
+            if (event.key == "Enter") {
                 var ip = document.getElementById("city");
+                var city = ip.value;
+                const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=09a71427c59d38d6a34f89b47d75975c&units=metric`;
+                fetch(url).then(rs => rs.json())
+                    .then(rs => {
+                        // lay du lieu cua json va su dung trong nay
+                        document.getElementById("weather_degree").innerText = rs.main.temp;
+                        document.getElementById("weather_feels_like").innerText = rs.main.feels_like;
+                        document.getElementById("weather_humidity").innerText = rs.main.humidity;
+                        document.getElementById("weather_wind").innerText = rs.wind.speed;
+                        for (var i = 0; i < rs.weather.length; i++) {
+                            var icon = rs.weather[i].icon;
+                            document.getElementById("weather_image").src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+                        }
+                    })
+                } else if(event.type === "click") {
+                    var ip = document.getElementById("city");
                 var city = ip.value;
                 const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=09a71427c59d38d6a34f89b47d75975c&units=metric`;
                 fetch(url).then(rs => rs.json())
