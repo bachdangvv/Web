@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main class="section main">
+        <div class="container">
+            <img id="sp_image"/>
+            <h1 id="sp_name">Vay thoi trang cao cap danh cho hoa hau</h1>
+            <p>Gia tien: <span id="sp_price">12</span>$</p>
+            <p>So luong: <span id="sp_qty">3</span>$</p>
+            <p>Rate: <span id="sp_rating">0</span></p>
+        </div>
+    </main>
+    <script type="text/javascript">
+        const url = "http://127.0.0.1:5500/data/sanpham.json";
+        fetch(url).then(rs=>rs.json())
+        .then(rs=>{
+            // lay du lieu cua json va su dung trong nay
+            document.getElementById("sp_name").innerText = rs.name;
+            document.getElementById("sp_price").innerText = rs.price;
+            document.getElementById("sp_qty").innerText = rs.qty;
+            document.getElementById("sp_image").src = rs.thumbnail;
+            document.getElementById("sp_rating").src = rs.review.rating;
+        })
+        
+    </script>
+</body>
+</html>

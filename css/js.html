@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Trò chơi dự đoán số</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 400px;
+      margin: auto;
+    }
+    input, button {
+      padding: 8px;
+      margin: 10px 0;
+      width: 100%;
+    }
+    #result {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🎯 Dự đoán số may mắn (0 → 99)</h2>
+
+  <label>Nhập số bạn đoán (0 - 99):</label>
+  <input type="number" id="guess" min="0" max="99" required>
+
+  <label>Nhập số tiền bạn đầu tư:</label>
+  <input type="number" id="investment" min="1" required>
+
+  <button onclick="playGame()">Dự đoán</button>
+
+  <div id="result"></div>
+
+  <script>
+    function playGame() {
+      const guess = parseInt(document.getElementById('guess').value);
+      const investment = parseFloat(document.getElementById('investment').value);
+      const randomNumber = Math.floor(Math.random() * 100); // số từ 0 đến 99
+
+      let resultText = `Số hệ thống là: ${randomNumber}.\n`;
+
+      if (guess === randomNumber) {
+        const profit = investment * 70;
+        resultText += `🎉 Chúc mừng! Bạn đã đoán đúng.\n💰 Lợi nhuận nhận được: ${profit.toLocaleString()} VNĐ`;
+      } else {
+        resultText += `😢 Rất tiếc! Bạn đã đoán sai.\n💸 Bạn mất: ${investment.toLocaleString()} VNĐ`;
+      }
+
+      document.getElementById('result').innerText = resultText;
+    }
+  </script>
+
+</body>
+</html>

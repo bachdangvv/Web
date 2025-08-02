@@ -1,0 +1,9 @@
+{
+    "name": "Dong ho Casio",
+    "price": 28,
+    "qty": 7,
+    "thumbnail": "images/canh-quat.png",
+    "review": {
+        "rating": 5
+    }
+}

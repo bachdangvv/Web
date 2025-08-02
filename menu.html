@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item .submenu{
+            display: none;
+        }
+        .item.active .submenu{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li class="item" id="item-1" onmouseenter="openMenu(1);" onmouseleave="closeMenu(1);">
+                <a href="#">Tin tuc</a>
+                <ul class="submenu">
+                    <li>Chinh tri</li>
+                    <li>The thao</li>
+                </ul>
+            </li>
+            <li class="item" id="item-2" onmouseenter="openMenu(2);" onmouseleave="closeMenu(2);">
+                <a href="#">Tai chinh</a>
+                <ul class="submenu">
+                    <li>Bat dong san</li>
+                    <li>Chung khoan</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <script>
+    function openMenu(n) {
+        var item = document.getElementById("item-"+n);
+        item.classList.add("active");
+    }
+
+    function closeMenu(n) {
+        var item = document.getElementById("item-"+n);
+        item.classList.remove("active");
+    }
+  </script>
+</body>
+</html>

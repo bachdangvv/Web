@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo JS 3</title>
+</head>
+<body>
+    <h1 id="head1" class="xyz">Demo JS Effect</h1>
+    <h2><span id="min">10</span>:<span id="sec">00</span></h2>
+    <script type="text/javascript">
+        // code here
+        // setTimeout(function(){
+        //     var h = document.getElementById("head1");
+        //     // h.innerText = "Đây là nội duung đã bị thay đổi";
+        //     // h.innerHTML = "<i>Đây là nội dung đã bị in nghiêng.</i>";
+        //     h.style.color = "deeppink";
+        //     h.style.fontSize = "50px";
+        //     h.classList.add("demo");
+        //     h.classList.remove("xyz");
+        // },3000);
+
+        // var m = document.getElementById("min");
+        // var s = document.getElementById("sec");
+        // var sec = parseInt(s.innerText);
+        // var min = parseInt(m.innerText);
+        // var timer = setInterval(function(){
+        //     sec--;
+        //     if(sec<0){
+        //         min--;
+        //         sec=59;
+        //     }
+        //     s.innerText = sec;
+        //     m.innerText = min;
+        //     if(min<0){
+        //         clearInterval(timer);
+        //     }
+        // },1000);
+
+        var m = 10;
+        var s = 0;
+        var timer = setInterval(function(){
+            console.log(m+":"+s);
+            var min = document.getElementById("min");
+            var sec = document.getElementById("sec");
+            min.innerText = m>=10?m:"0"+m;
+            sec.innerText = s>=10?s:"0"+s;
+            s--;
+            if(s<0){
+                m--;
+                s=59;
+            }
+            if(m<0){
+                clearInterval(timer);
+            }
+        },1000);
+
+    </script>
+</body>
+</html>
