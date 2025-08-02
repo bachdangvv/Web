@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Weather</title>
+    <style>
+        
+        body {
+  background-color: #222;
+  color: #ccc;
+  font-family: Arial, sans-serif;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.weather-left {
+   display: flex;
+  align-items: center;         /* Căn giữa theo chiều dọc */
+  justify-content: flex-start; /* Căn trái toàn bộ nội dung */
+  padding: 20px;
+  gap: 30px;     
+}
+
+.weather-left img {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+.temp-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.weather-degree {
+  font-size: 64px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.unit {
+  font-size: 18px;
+  color: #ccc;
+  margin-left: 10px;
+}
+
+.weather-right {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 16px;
+}
+    </style>
+</head>
+<body>
+    <div class="weather-info">
+        <div class="weather-left">
+            <img id="weather_image" class="weather-image" src="images/cloud.png"/>
+            <div class="temp_block">
+                <p>
+                    <span id="weather_degree" class="weather-degree"></span>
+                    <span class="unit">
+                    <span class="celsius">&deg;C</span> | <span class="fahrenheit">&deg;F</span>
+                </p>
+            </div>
+        </div>
+        <div class="weather-right">
+            <p><span id="weather_feels_like" class="weather-feels-like"></span>&deg;C</p>
+            <p><span id="weather_humidity" class="weather-humidity"></span>%</p>
+            <p><span id="weather_wind" class="weather-wind"></span>km/h</p>
+        </div> 
+    </div>
+    <script type="text/javascript">
+        const url = "https://api.openweathermap.org/data/2.5/weather?q=hanoi&appid=09a71427c59d38d6a34f89b47d75975c&units=metric";
+        fetch(url).then(rs=>rs.json())
+        .then(rs=>{
+            // lay du lieu cua json va su dung trong nay
+            document.getElementById("weather_degree").innerText = rs.main.temp;
+            document.getElementById("weather_feels_like").innerText = rs.main.feels_like;
+            document.getElementById("weather_humidity").innerText = rs.main.humidity;
+            document.getElementById("weather_wind").innerText = rs.wind.speed;
+        })
+    </script>
+</body>
+</html>
