@@ -5,56 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Json Weather</title>
     <style>
-        
         body {
-  background-color: #222;
-  color: #ccc;
-  font-family: Arial, sans-serif;
-}
+            background-color: #222;
+            color: #9e9e9e;
+            font-family: Arial, sans-serif;
+        }
+    
+        .weather-info {
+            display: flex;
+            justify-content: flex-start;
+            padding: 20px;
+        }
+    
+        .weather-left {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+            gap: 30px;
+        }
+    
+        .weather-left img {
+            width: 60px;
+            height: 60px;
+            margin-right: 10px;
+        }
+    
+        .temp-block {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    
+        .weather-degree {
+            font-size: 64px;
+            font-weight: bold;
+            color: #fff;
+        }
+    
+        .unit {
+            color: #9e9e9e;
+            font-size: 18px;
+            margin-left: 10px;
+        }
 
-.weather-info {
-  display: flex;
-  justify-content: flex-start;
-  padding: 20px;
-}
-
-.weather-left {
-   display: flex;
-  align-items: center;         /* Căn giữa theo chiều dọc */
-  justify-content: flex-start; /* Căn trái toàn bộ nội dung */
-  padding: 20px;
-  gap: 30px;     
-}
-
-.weather-left img {
-  width: 60px;
-  height: 60px;
-  margin-right: 10px;
-}
-.temp-block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.weather-degree {
-  font-size: 64px;
-  font-weight: bold;
-  color: #fff;
-}
-
-.unit {
-  font-size: 18px;
-  color: #ccc;
-  margin-left: 10px;
-}
-
-.weather-right {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  font-size: 16px;
-}
+        .unit-celcius {
+            color: #fff;
+        }
+    
+        .weather-right {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
@@ -65,7 +69,8 @@
                 <p>
                     <span id="weather_degree" class="weather-degree"></span>
                     <span class="unit">
-                    <span class="celsius">&deg;C</span> | <span class="fahrenheit">&deg;F</span>
+                        <span class="unit-celcius">&deg;C</span> | <span class="unit-fahrenheit">&deg;F</span>
+                    </span>
                 </p>
             </div>
         </div>
