@@ -64,7 +64,7 @@
 <body>
     <div class="weather-info">
         <div class="weather-left">
-            <img id="weather_image" class="weather-image" src="images/cloud.png"/>
+            <img id="weather_image" class="weather-image" src="#"/>
             <div class="temp_block">
                 <p>
                     <span id="weather_degree" class="weather-degree"></span>
@@ -89,7 +89,12 @@
             document.getElementById("weather_feels_like").innerText = rs.main.feels_like;
             document.getElementById("weather_humidity").innerText = rs.main.humidity;
             document.getElementById("weather_wind").innerText = rs.wind.speed;
+            for(var i=0;i<rs.weather.length;i++){
+                var icon = rs.weather[i].icon;
+                document.getElementById("weather_image").src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+            }
         })
+        
     </script>
 </body>
 </html>
