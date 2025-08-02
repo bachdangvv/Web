@@ -83,9 +83,12 @@
             </div>
         </div>
         <div class="weather-right">
+            <p>Thoi gian:<span id="weather_time" class="weather-time"></span></p>
             <p>Nhiệt độ ngoài trời: <span id="weather_feels_like" class="weather-feels-like"></span>&deg;C</p>
             <p>Độ ẩm: <span id="weather_humidity" class="weather-humidity"></span>%</p>
-            <p>Gió: <span id="weather_wind" class="weather-wind"></span>km/h</p>
+            <p>Tốc độ gió: <span id="weather_wind" class="weather-wind"></span>km/h</p>
+            <p>Gió giật: <span id="weather_gustwind" class="weather-gustwind"></span>km/h</p>
+
         </div> 
     </div>
     <script type="text/javascript">
@@ -101,6 +104,8 @@
                         document.getElementById("weather_feels_like").innerText = rs.main.feels_like;
                         document.getElementById("weather_humidity").innerText = rs.main.humidity;
                         document.getElementById("weather_wind").innerText = rs.wind.speed;
+                        document.getElementById("weather_gustwind").innerText = rs.wind.gust;
+
                         for (var i = 0; i < rs.weather.length; i++) {
                             var icon = rs.weather[i].icon;
                             document.getElementById("weather_image").src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
@@ -118,7 +123,9 @@
                         document.getElementById("weather_humidity").innerText = rs.main.humidity;
                         document.getElementById("weather_wind").innerText = rs.wind.speed;
                         for (var i = 0; i < rs.weather.length; i++) {
+                            var dt = rs.weather[i].dt_txt;
                             var icon = rs.weather[i].icon;
+                            document.getElementById("weather_image").src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
                             document.getElementById("weather_image").src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
                         }
                     })
