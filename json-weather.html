@@ -105,7 +105,7 @@
                         document.getElementById("weather_humidity").innerText = rs.main.humidity;
                         document.getElementById("weather_wind").innerText = rs.wind.speed;
                         document.getElementById("weather_gustwind").innerText = rs.wind.gust;
-
+                        document.getElementById("weather_time").innerText = rs.dt_txt;
                         for (var i = 0; i < rs.weather.length; i++) {
                             var icon = rs.weather[i].icon;
                             document.getElementById("weather_image").src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
