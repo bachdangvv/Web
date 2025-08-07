@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetFilm</title>
+    <link rel="stylesheet" href="css/pratical-exam-frontend.css"/>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">NetFilm</div>
+        <nav class="nav">
+            <a href="/about-us-pratical-exam-frontend.html">About Us</a>
+            <a href="/movies-pratical-exam-frontend.html">Movies</a>
+            <a href="favorites-pratical-exam-frontend.html">Favorites</a>
+        </nav>
+        <div class="search-container">
+            <input type="text" class="search-box" placeholder="Enter movie for searching...">
+            <span class="search-icon">🔍</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="filter-group">
+                <div class="filter-item">
+                    <input type="checkbox" id="action">
+                    <label for="action">Action</label>
+                </div>
+                <div class="filter-item">
+                    <input type="checkbox" id="adventure">
+                    <label for="adventure">Adventure</label>
+                </div>
+                <div class="filter-item">
+                    <input type="checkbox" id="romance">
+                    <label for="romance">Romance</label>
+                </div>
+                <div class="filter-item">
+                    <input type="checkbox" id="documentary">
+                    <label for="documentary">Documentary</label>
+                </div>
+                <div class="filter-item">
+                    <input type="checkbox" id="war">
+                    <label for="war">War</label>
+                </div>
+                <div class="filter-item">
+                    <input type="checkbox" id="sport">
+                    <label for="sport">Sport</label>
+                </div>
+                <div class="filter-item">
+                    <input type="checkbox" id="musical">
+                    <label for="musical">Musical</label>
+                </div>
+                <div class="filter-item">
+                    <input type="checkbox" id="family">
+                    <label for="family">Family</label>
+                </div>
+            </div>
+
+        </aside>
+
+        <main class="main-content">
+            <div class="featured-movie">
+                <div class="video-container">
+                    <div class="play-button"><iframe width="560" height="315" src="https://www.youtube.com/embed/nrXlY6gzTTM?si=Tt8ZQAw4inBiXyra" title="YouTube video player" frameborder="0" allowfullscreen></iframe></div>
+                </div>
+                <div class="movie-info">
+                    <h2 class="movie-title">The Post</h2>
+                    <p class="movie-description">
+                        The Post is a 2017 American political thriller film about The Washington Post and the publication of the Pentagon Papers. It was directed and produced by Steven Spielberg, and written by Liz Hannah and Josh Singer. It stars Meryl Streep as Katharine Graham, the longtime executive editor of The Washington Post, and Tom Hanks as Ben Bradlee, the longtime executive editor of The Washington Post, with Sarah Paulson, Bob Odenkirk, Tracy Letts, Bradley Whitford, David Cross, Bruce Greenwood, Carrie Coon, Alison Brie, and Matthew Rhys in supporting roles.
+
+                        Set in 1971, The Post depicts the true story of attempts by journalists at The Washington Post to publish the infamous Pentagon Papers, a set of classified documents regarding the 30-year involvement of the United States government in the Vietnam War and earlier in French Indochina back to the 1940s.
+                    </p>
+                </div>
+            </div>
+
+            <div class="movies-grid">
+                <div class="movie-card">
+                    <div class="movie-poster poster-the-post"><img src="/images/the-post.jpg" width="auto" height="200px"></div>
+                    <div class="movie-card-info">
+                        <div class="movie-card-title">The Post</div>
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">☆</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card">
+                    <div class="movie-poster poster-godfather"><img src="/images/godfather.jpg" width="auto" height="200px"></div>
+                    <div class="movie-card-info">
+                        <div class="movie-card-title">The Godfather</div>
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card">
+                    <div class="movie-poster poster-titanic"><img src="/images/titanic.jpg" width="auto" height="200px"></div>
+                    <div class="movie-card-info">
+                        <div class="movie-card-title">Titanic</div>
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">☆</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card">
+                    <div class="movie-poster poster-lions"><img src="/images/lions.jpg" width="auto" height="200px"></div>
+                    <div class="movie-card-info">
+                        <div class="movie-card-title">Lions</div>
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">☆</span>
+                            <span class="star">☆</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card">
+                    <div class="movie-poster poster-avatar"><img src="/images/avatar.jpg" width="auto" height="200px"></div>
+                    <div class="movie-card-info">
+                        <div class="movie-card-title">Avatar</div>
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">☆</span>
+                            <span class="star">☆</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card">
+                    <div class="movie-poster poster-parasite"><img src="/images/parasite.jpg" width="auto" height="200px"></div>
+                    <div class="movie-card-info">
+                        <div class="movie-card-title">Parasite</div>
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">☆</span>
+                            <span class="star">☆</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-logo">Blue Entertainment</div>
+    </footer>
+</body>
+</html>

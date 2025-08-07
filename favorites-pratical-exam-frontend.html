@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Favorites - NetFilm</title>
+  <link rel="stylesheet" href="css/pratical-exam-frontend.css"/>
+  <style>
+    .footer{
+        position: absolute;
+            bottom: 0;
+            width: 100%;
+    }
+    
+  </style>
+</head>
+<body>
+  <header class="header">
+        <div class="logo">NetFilm</div>
+        <nav class="nav">
+            <a href="/about-us-pratical-exam-frontend.html">About Us</a>
+            <a href="/movies-pratical-exam-frontend.html">Movies</a>
+            <a href="favorites-pratical-exam-frontend.html">Favorites</a>
+        </nav>
+        <div class="search-container">
+            <input type="text" class="search-box" placeholder="Enter movie for searching...">
+            <span class="search-icon">🔍</span>
+        </div>
+    </header>
+
+  <main class="container">
+    <aside class="sidebar">
+            <div class="filter-group">
+                <div class="filter-item">
+                    <input type="checkbox" id="action">
+                    <label for="action">Action</label>
+                </div>
+                <div class="filter-item">
+                    <input type="checkbox" id="adventure">
+                    <label for="adventure">Adventure</label>
+                </div>
+                <div class="filter-item">
+                    <input type="checkbox" id="romance">
+                    <label for="romance">Romance</label>
+                </div>
+                <div class="filter-item">
+                    <input type="checkbox" id="documentary">
+                    <label for="documentary">Documentary</label>
+                </div>
+                <div class="filter-item">
+                    <input type="checkbox" id="war">
+                    <label for="war">War</label>
+                </div>
+                <div class="filter-item">
+                    <input type="checkbox" id="sport">
+                    <label for="sport">Sport</label>
+                </div>
+                <div class="filter-item">
+                    <input type="checkbox" id="musical">
+                    <label for="musical">Musical</label>
+                </div>
+                <div class="filter-item">
+                    <input type="checkbox" id="family">
+                    <label for="family">Family</label>
+                </div>
+            </div>
+
+        </aside>
+
+    <section class="content">
+      <h1 class="page-title">About NetFilm</h1>
+      <div class="movies-grid">
+                <div class="movie-card">
+                    <div class="movie-poster poster-the-post"><img src="/images/the-post.jpg" width="auto" height="200px"></div>
+                    <div class="movie-card-info">
+                        <div class="movie-card-title">The Post</div>
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">☆</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card">
+                    <div class="movie-poster poster-godfather"><img src="/images/godfather.jpg" width="auto" height="200px"></div>
+                    <div class="movie-card-info">
+                        <div class="movie-card-title">The Godfather</div>
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card">
+                    <div class="movie-poster poster-titanic"><img src="/images/titanic.jpg" width="auto" height="200px"></div>
+                    <div class="movie-card-info">
+                        <div class="movie-card-title">Titanic</div>
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">☆</span>
+                        </div>
+                    </div>
+                </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+        <div class="footer-logo">Blue Entertainment</div>
+    </footer>
+</body>
+</html>

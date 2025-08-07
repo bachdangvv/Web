@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Dự báo thời tiết Hà Nội</title>
+  <style>
+    body {
+      background-color: #222;
+      color: #9e9e9e;
+      font-family: Arial, sans-serif;
+    }
+
+    h2 {
+      text-align: center;
+      color: #fff;
+      margin-top: 20px;
+    }
+
+    .weather-forecast {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 20px;
+      justify-content: center;
+    }
+
+    .forecast-card {
+      background-color: #333;
+      border-radius: 10px;
+      padding: 10px;
+      width: 160px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .forecast-card img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .temp {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 5px 0;
+    }
+
+    .time {
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .description {
+      font-size: 14px;
+      color: #9e9e9e;
+    }
+  </style>
+</head>
+<body>
+  <h2>Dự báo thời tiết Hà Nội (mỗi 3 giờ)</h2>
+
+  <div id="forecast_container" class="weather-forecast"></div>
+
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+      const city = "Hanoi";
+      const apiKey = "09a71427c59d38d6a34f89b47d75975c"; // Sử dụng key của bạn
+      const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+
+      fetch(url)
+        .then(res => res.json())
+        .then(rs => {
+          const container = document.getElementById("forecast_container");
+          container.innerHTML = "";
+
+          for (var i = 0; i < rs.list.length; i++) {
+            var icon = rs.list[i].weather[0].icon;
+            var time = rs.list[i].dt_txt;
+            var temp = rs.list[i].main.temp.toFixed(1);
+            var desc = rs.list[i].weather[0].description;
+
+            var card = document.createElement("div");
+            card.className = "forecast-card";
+
+            card.innerHTML = `
+              <div class="time">${time}</div>
+              <div class="temp">${temp}&deg;C</div>
+              <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${desc}" />
+              <div class="description">${desc}</div>
+            `;
+
+            container.appendChild(card);
+          }
+        });
+    });
+  </script>
+</body>
+</html>
