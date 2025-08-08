@@ -25,6 +25,10 @@
             font-size: 18px;
             font-weight: bold;
         }
+        
+        .logo a {
+            text-decoration: none;
+        }
 
         .logo::before {
             content: "🎬";
